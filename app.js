@@ -11,6 +11,16 @@ function submitEOQData() {
         purchase_price: parseFloat(document.getElementById('purchasePrice').value)
     };
 
+    // Show loading text
+    document.getElementById('loading').style.display = 'block';
+    let dots = 0;
+    const dotsInterval = setInterval(() => {
+        dots = (dots + 1) % 5; // Reset after four cycles (., .., ..., ...., then reset)
+        document.getElementById('loadingDots').textContent = '.'.repeat(dots);
+    }, 500); // Update text every 500 milliseconds (0.5 seconds)
+
+    document.getElementById('results').innerHTML = '';  // Clear previous results if any
+
     fetch('https://panel.stockbalance.nl:3001/calculate-eoq', {
         method: 'POST',
         headers: {
@@ -20,11 +30,22 @@ function submitEOQData() {
     })
     .then(response => response.json())
     .then(result => {
-        document.getElementById('results').innerHTML = `
-            <p>EOQ: ${result.eoq.toFixed(2)}</p>
-            <p>Reorder Point: ${result.reorderPoint.toFixed(2)}</p>
-            <p>Safety Stock: ${result.safetyStock.toFixed(2)}</p>
-        `;
+        // Set a delay of 3 seconds before displaying the results
+        setTimeout(() => {
+            clearInterval(dotsInterval); // Stop the loading animation
+            document.getElementById('loading').style.display = 'none'; // Hide loading text
+
+            // Display results
+            document.getElementById('results').innerHTML = `
+                <p>Optimale bestelhoeveelheid: ${result.eoq.toFixed(2)}</p>
+                <p>Herbestelpunt: ${result.reorderPoint.toFixed(2)}</p>
+                <p>Veiligheidsvoorraad: ${result.safetyStock.toFixed(2)}</p>
+            `;
+        }, 3000); // 3000 milliseconds = 3 seconds
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error('Error:', error);
+        clearInterval(dotsInterval); // Stop the loading animation
+        document.getElementById('loading').style.display = 'none'; // Hide loading text
+    });
 }

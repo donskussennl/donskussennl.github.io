@@ -118,9 +118,11 @@
                 <button type="button" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-white bg-purple-700 rounded-lg sm:w-auto focus:outline-none hover:bg-purple-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-purple-700" onclick="submitEOQData()">Bereken optimale inkoophoeveelheid</button>
             </div>
         </form>
-            <div id="results">
-                <!-- Results will be displayed here -->
-            </div>
+        <div id="loading" style="display: none;">
+            Laden<span id="loadingDots"></span>
+        </div>
+        <div id="results"></div>
+        
          
             
                        
