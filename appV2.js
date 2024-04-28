@@ -1,3 +1,29 @@
+function validateAndSubmit() {
+    // List of all input IDs
+    const inputs = [
+        'salesData', 'currentStock', 'costPrice', 'orderCost', 
+        'moq', 'uom', 'leadTime', 'stockCost', 'purchasePrice'
+    ];
+
+    let isValid = true;
+
+    inputs.forEach(id => {
+        const input = document.getElementById(id);
+        if (!input.value.trim()) {
+            isValid = false;
+            input.classList.add('error');  // Add an error class for styling
+        } else {
+            input.classList.remove('error'); // Remove the error class if input is valid
+        }
+    });
+
+    if (isValid) {
+        submitEOQData();
+    } else {
+        alert('Please fill in all required fields.');
+    }
+}
+
 function submitEOQData() {
     const data = {
         sales_data: document.getElementById('salesData').value.split(',').map(Number),
