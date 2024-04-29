@@ -104,9 +104,9 @@
                     <label for="salesData" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Verkopen/gebruik (gescheiden door ,)</label>
                     <textarea id="salesData" placeholder="200, 210, 250, 230, 200, 200, 150, 200, 190, 215, 200" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
                 </div>
-                <div>
-                    <label for="Cost Price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kostprijs per product</label>
-                    <input type="number" id="costPrice" class="rounded-none rounded-e-lg bg-gray-50 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="">
+                <div class="sm:col-span-1">
+                    <label for="costPrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Min. afname</label>
+                    <input type="number" id="costPrice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Minimum Order Quantity">
                 </div>
                 <div class="sm:col-span-1">
                     <label for="orderCost" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Min. afname</label>
@@ -128,7 +128,10 @@
                     <label for="stockCost" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voorraadkosten per jaar per product</label>
                     <input type="number" id="stockCost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Stock Cost">
                 </div>  
-                  
+                <div class="sm:col-span-1">
+                    <label for="serviceLevel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Min. afname</label>
+                    <input type="number" id="serviceLevel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="1.282">
+                </div>  
   
                 <!--<div>
                   <label for="serviceLevel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sevicelevel</label>
