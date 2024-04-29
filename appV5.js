@@ -27,7 +27,6 @@ function validateAndSubmit() {
 function submitEOQData() {
     const data = {
         sales_data: document.getElementById('salesData').value.split(',').map(Number),
-        current_stock: parseInt(document.getElementById('currentStock').value, 10),
         cost_price: parseFloat(document.getElementById('costPrice').value),
         order_cost: parseFloat(document.getElementById('orderCost').value),
         moq: parseInt(document.getElementById('moq').value, 10),
