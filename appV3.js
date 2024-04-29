@@ -34,7 +34,7 @@ function submitEOQData() {
         uom: parseInt(document.getElementById('uom').value, 10),
         lead_time: parseInt(document.getElementById('leadTime').value, 10),
         stock_cost: parseFloat(document.getElementById('stockCost').value),
-        purchase_price: parseFloat(document.getElementById('purchasePrice').value)
+        service_level: parseFloat(document.getElementById('serviceLevel').value)
     };
 
     // Show loading text

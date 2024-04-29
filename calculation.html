@@ -83,7 +83,7 @@
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Inkoophoeveelheid berekenen met Excel 2.0</h1>
-                <p>Bereken de optimale inkoophoeveelheid van een product.</p>
+                <p>Bereken de optimale inkoophoeveelheid van een product. <b>Ook te gebruiken voor thuis. Denk aan de optimale hoeveelheid WC-rollen.</b></b></p>
         <form id="eoqForm">
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <div class="sm:col-span-2">
@@ -119,9 +119,13 @@
                     <input type="number" id="stockCost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Stock Cost">
                 </div>  
                 <div>
-                    <label for="purchasePrice" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">purchasePrice</label>
-                    <input type="number" id="purchasePrice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Purchase Price">
-                </div>
+                  <label for="serviceLevel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sevicelevel</label>
+                  <select id="serviceLevel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                      <option selected="">Kies een servicelevel</option>
+                      <option value="1.282">90%</option>
+                      <option value="1.645">95%</option>
+                      <option value="2.054">98%</option>
+                  </select>               </div>
                 <button type="button" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-white bg-purple-700 rounded-lg sm:w-auto focus:outline-none hover:bg-purple-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-purple-700" onclick="validateAndSubmit()">Bereken optimale inkoophoeveelheid</button>
             </div>
         </form>
@@ -229,6 +233,6 @@
         </div>
     </footer>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
-<script src="appV2.js"></script>    
+<script src="appV3.js"></script>    
 </body>
 </html>
