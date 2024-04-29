@@ -1,7 +1,7 @@
 function validateAndSubmit() {
     // List of all input IDs
     const inputs = [
-        'salesData', 'currentStock', 'costPrice', 'orderCost', 
+        'salesData', 'costPrice', 'orderCost', 
         'moq', 'uom', 'leadTime', 'stockCost', 'serviceLevel'
     ];
 
@@ -29,11 +29,11 @@ function submitEOQData() {
         sales_data: document.getElementById('salesData').value.split(',').map(Number),
         cost_price: parseFloat(document.getElementById('costPrice').value),
         order_cost: parseFloat(document.getElementById('orderCost').value),
-        moq: parseInt(document.getElementById('moq').value, 10),
-        uom: parseInt(document.getElementById('uom').value, 10),
         lead_time: parseInt(document.getElementById('leadTime').value, 10),
         stock_cost: parseFloat(document.getElementById('stockCost').value),
-        service_level: parseFloat(document.getElementById('serviceLevel').value)
+        service_level: parseFloat(document.getElementById('serviceLevel').value,
+        moq: parseInt(document.getElementById('moq').value, 10),
+        uom: parseInt(document.getElementById('uom').value, 10))
     };
 
     // Show loading text
