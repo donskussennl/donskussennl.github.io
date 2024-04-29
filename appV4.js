@@ -2,7 +2,7 @@ function validateAndSubmit() {
     // List of all input IDs
     const inputs = [
         'salesData', 'currentStock', 'costPrice', 'orderCost', 
-        'moq', 'uom', 'leadTime', 'stockCost', 'purchasePrice'
+        'moq', 'uom', 'leadTime', 'stockCost', 'serviceLevel'
     ];
 
     let isValid = true;
