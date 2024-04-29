@@ -63,8 +63,10 @@ function submitEOQData() {
 
             // Display results
             document.getElementById('results').innerHTML = `
-                <p>Optimale bestelhoeveelheid: ${result.eoq.toFixed(2)}</p>
-                <p>Herbestelpunt: ${result.reorderPoint.toFixed(2)}</p>
+                <p>Optimale bestelhoeveelheid (EOQraw): ${result.eoqAdjusted.toFixed(2)}</p>
+                <p>Optimale bestelhoeveelheid (incl. MOQ and EOQ): ${result.eoqRaw.toFixed(2)}</p>
+                <p>Houdkosten: ${result.holdingCost.toFixed(2)}</p>
+                <p>annualDemand: ${result.annualDemand.toFixed(2)}</p>
                 <p>Veiligheidsvoorraad: ${result.safetyStock.toFixed(2)}</p>
             `;
         }, 3000); // 3000 milliseconds = 3 seconds
