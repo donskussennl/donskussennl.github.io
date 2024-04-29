@@ -31,10 +31,11 @@ function submitEOQData() {
         order_cost: parseFloat(document.getElementById('orderCost').value),
         lead_time: parseInt(document.getElementById('leadTime').value, 10),
         stock_cost: parseFloat(document.getElementById('stockCost').value),
-        service_level: parseFloat(document.getElementById('serviceLevel').value,
+        service_level: parseFloat(document.getElementById('serviceLevel').value), // Corrected: added missing parenthesis
         moq: parseInt(document.getElementById('moq').value, 10),
-        uom: parseInt(document.getElementById('uom').value, 10)
+        uom: parseInt(document.getElementById('uom').value, 10) // Corrected: removed extra parenthesis
     };
+    
 
     // Show loading text
     document.getElementById('loading').style.display = 'block';
