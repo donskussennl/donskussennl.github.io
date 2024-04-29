@@ -33,7 +33,7 @@ function submitEOQData() {
         stock_cost: parseFloat(document.getElementById('stockCost').value),
         service_level: parseFloat(document.getElementById('serviceLevel').value,
         moq: parseInt(document.getElementById('moq').value, 10),
-        uom: parseInt(document.getElementById('uom').value, 10))
+        uom: parseInt(document.getElementById('uom').value, 10)
     };
 
     // Show loading text
