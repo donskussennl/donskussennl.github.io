@@ -83,24 +83,24 @@
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Inkoophoeveelheid berekenen met Excel 2.0</h1>
-                <p>Bereken de optimale inkoophoeveelheid van een product. <b>Ook te gebruiken voor thuis. Denk aan de optimale hoeveelheid WC-rollen.</b></p style="margin-botom: 20px;">
+                <p>Bereken de optimale inkoophoeveelheid van een product. <b>Ook te gebruiken voor thuis. Denk aan de optimale hoeveelheid WC-rollen.</b><br><br></p style="margin-botom: 20px;">
         <form id="eoqForm">
             <div class="flex items-center mb-4">
                 <input  id="modeToggle" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
-                <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree to the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
+                <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">&nbsp;Activeer huishoud-modus. Bereken je optimale voorraad eieren / WC-rollen.</label>
             </div>
 
-            <div class="grid gap-4 sm:grid-cols-3 sm:gap-6">
+            <div class="grid gap-4 sm:grid-cols-3 sm:gap-6" style="margin-bottom: 20px;">
                 <div>
-                    <label for="salesData" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht februari</label>
+                    <label for="salesData" data-month="april" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht april</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
                 </div>
                 <div>
-                    <label for="salesData" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht maart</label>
+                    <label for="salesData" data-month="maart" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht maart</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
                 </div>
                 <div>
-                    <label for="salesData" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht april</label>
+                    <label for="salesData" data-month="februari" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht februari</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
                 </div>
             </div>
@@ -118,11 +118,11 @@
                     <input type="number" id="orderCost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Minimum Order Quantity">
                 </div>
                 <div>
-                    <label for="leadTime" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Levertijd leverancier (in weken)</label>
+                    <label for="leadTime" id="leadTimeLabel" class="leadTimeLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Levertijd leverancier (in weken)</label>
                     <input type="number" id="leadTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Lead Time (weeks)">
                 </div>
                 <div>
-                    <label for="stockCost" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voorraadkosten per jaar per product</label>
+                    <label for="stockCost" id="stockCostLabel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voorraadkosten per jaar per product</label>
                     <input type="number" id="stockCost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Stock Cost">
                 </div> 
                 <div class="sm:col-span-1">
@@ -130,7 +130,7 @@
                     <input type="number" id="uom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Unit of Measure">
                 </div> 
                 <div class="sm:col-span-1">
-                    <label for="moq" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Min. afname</label>
+                    <label for="moq" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Verplichte minimale afname</label>
                     <input type="number" id="moq" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Minimum Order Quantity">
                 </div>
                 <!--<div class="sm:col-span-1">
@@ -257,17 +257,36 @@
     document.addEventListener('DOMContentLoaded', function() {
         const toggleCheckbox = document.getElementById('modeToggle');
         const leadTimeInput = document.getElementById('leadTime');
-        const salesDataLabel = document.getElementById('salesDataLabel');
+        const UOMInput = document.getElementById('uom');
+        const salesDataLabels = document.querySelectorAll('.salesDataLabel');
+        const leadTimeLabel = document.getElementById('leadTimeLabel');
+        const stockCostLabel = document.getElementById('stockCostLabel');
+
+            // Ensure elements are found
+    if (!toggleCheckbox || !leadTimeInput || !UOMInput || !leadTimeLabel || !stockCostLabel) {
+        console.error('One or more elements are missing!');
+        return;
+    }
     
         toggleCheckbox.addEventListener('change', function() {
+            salesDataLabels.forEach(label => {
+                const month = label.getAttribute('data-month');
+                label.textContent = this.checked ? `Aantal gebruikt ${month}` : `Aantal verkocht ${month}`;
+            });
             if (this.checked) {
                 // Actions when the checkbox is checked
                 leadTimeInput.value = '1';  // Prefill the 'leadTime' input
+                uom.value = '12';  // Prefill the 'leadTime' input
+                leadTimeLabel.textContent = 'Inkoopfrequentie (in weken)';  // Change text
+                stockCostLabel.textContent = 'Bestelkosten (bv het ritje naar de supermarkt)';  // Change text
                 salesDataLabel.textContent = 'Aantal gebruikt';  // Change text
             } else {
                 // Actions when the checkbox is not checked
                 leadTimeInput.value = '';  // Clear or set to another default value
-                salesDataLabel.textContent = 'Aantal verkocht';  // Revert text
+                uom.value = '1';  // Prefill the 'leadTime' input
+                leadTimeLabel.textContent = 'Levertijd leverancier (in weken)';  // Change text
+                stockCostLabel.textContent = 'Bestelkosten';  // Revert text
+                salesDataLabel.textContent = 'Aantal verkocht';  // Change text
             }
         });
     });
