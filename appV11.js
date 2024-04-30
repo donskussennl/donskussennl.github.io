@@ -25,7 +25,7 @@ function validateAndSubmit() {
 }
 
 function submitEOQData() {
-    const salesInputs = document.querySelectorAll('input[name="salesData[]"]');
+    const salesInputs = document.querySelectorAll('input[name="salesData"]');
     const salesData = Array.from(salesInputs).map(input => {
         return input.value ? Number(input.value) : 0; // Convert to number, default to 0 if empty
     });
