@@ -90,7 +90,7 @@
                 <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">&nbsp;Activeer huishoud-modus. Bereken je optimale voorraad eieren / WC-rollen.</label>
             </div>
 
-            <div class="grid gap-4 sm:grid-cols-3 sm:gap-6" style="margin-bottom: 20px;">
+            <div id="salesDataContainer" class="grid gap-4 sm:grid-cols-3 sm:gap-6" style="margin-bottom: 20px;">
                 <div>
                     <label for="salesData" data-month="april" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht april</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
@@ -104,6 +104,8 @@
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">
                 </div>
             </div>
+            <button id="addQuarterBtn" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Meer data toevoegen</button>
+
             <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
                 <!--<div>
                     <label for="salesData" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Verkopen/gebruik (gescheiden door ,)</label>
@@ -261,6 +263,25 @@
         const salesDataLabels = document.querySelectorAll('.salesDataLabel');
         const leadTimeLabel = document.getElementById('leadTimeLabel');
         const stockCostLabel = document.getElementById('stockCostLabel');
+
+        const container = document.getElementById('salesDataContainer');
+        let quarterCount = 0;  // To track how many times new fields have been added
+
+        document.getElementById('addQuarterBtn').addEventListener('click', function() {
+            if (quarterCount < 9) {  // Allow up to 3 additional sets of fields
+                quarterCount++;  // Increment the count
+
+                // Create new input fields
+                const newDiv = document.createElement('div');
+                newDiv.className = 'sm:col-span-1';
+                newDiv.innerHTML = `
+                    <label for="salesDataQ${quarterCount}" data-month="Q${quarterCount}" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht Q${quarterCount}</label>
+                    <input type="number" name="salesDataQ${quarterCount}" id="salesDataQ${quarterCount}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name" required="">`;
+
+                // Append the new div to the container
+                container.appendChild(newDiv);
+            }
+        });
 
             // Ensure elements are found
     if (!toggleCheckbox || !leadTimeInput || !UOMInput || !leadTimeLabel || !stockCostLabel) {
