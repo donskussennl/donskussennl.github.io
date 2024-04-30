@@ -259,6 +259,8 @@
     document.addEventListener('DOMContentLoaded', function() {
         const toggleCheckbox = document.getElementById('modeToggle');
         const leadTimeInput = document.getElementById('leadTime');
+        const stockCostInput = document.getElementById('orderCost');
+        const orderCostInput = document.getElementById('stockCost');
         const UOMInput = document.getElementById('uom');
         const salesDataLabels = document.querySelectorAll('.salesDataLabel');
         const leadTimeLabel = document.getElementById('leadTimeLabel');
@@ -318,6 +320,8 @@
                 // Actions when the checkbox is checked
                 leadTimeInput.value = '1';  // Prefill the 'leadTime' input
                 uom.value = '12';  // Prefill the 'leadTime' input
+                stockCost.value = '0,1';  // Prefill the 'leadTime' input
+                orderCost.value = '0,1';  // Prefill the 'leadTime' input
                 leadTimeLabel.textContent = 'Inkoopfrequentie (in weken)';  // Change text
                 orderCostLabel.textContent = 'Bestelkosten (bv het ritje naar de supermarkt)';  // Change text
                 costPriceLabel.textContent = 'Productprijs';  // Change text
