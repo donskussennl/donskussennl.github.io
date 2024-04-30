@@ -25,8 +25,13 @@ function validateAndSubmit() {
 }
 
 function submitEOQData() {
+    const salesInputs = document.querySelectorAll('input[name="salesData[]"]');
+    const salesData = Array.from(salesInputs).map(input => {
+        return input.value ? Number(input.value) : 0; // Convert to number, default to 0 if empty
+    });
     const data = {
-        sales_data: document.getElementById('salesData').value.split(',').map(Number),
+        /*sales_data: document.getElementById('salesData').value.split(',').map(Number),*/
+        sales_data: salesData,
         cost_price: parseFloat(document.getElementById('costPrice').value),
         order_cost: parseFloat(document.getElementById('orderCost').value),
         lead_time: parseInt(document.getElementById('leadTime').value, 10),
