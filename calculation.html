@@ -82,7 +82,7 @@
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Bereken de optimale voorraad</h1>
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Bereken je optimale voorraad</h1>
                 <p>Bereken de optimale inkoophoeveelheid van een product. <b>Ook te gebruiken voor thuis. Denk aan de optimale hoeveelheid WC-rollen.</b><br><br></p style="margin-botom: 20px;">
         <form id="eoqForm">
             <div class="flex items-center mb-4">
@@ -92,15 +92,15 @@
 
             <div id="salesDataContainer" class="grid gap-4 sm:grid-cols-3 sm:gap-6" style="margin-bottom: 20px;">
                 <div>
-                    <label for="salesData" data-month="april" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht april</label>
+                    <label for="salesData" data-month="april" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht april 2024</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">
                 </div>
                 <div>
-                    <label for="salesData" data-month="maart" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht maart</label>
+                    <label for="salesData" data-month="maart" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht maart 2024</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">
                 </div>
                 <div>
-                    <label for="salesData" data-month="februari" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht februari</label>
+                    <label for="salesData" data-month="februari" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht feb. 2024</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">
                 </div>
             </div>
@@ -121,15 +121,15 @@
                 </div>
                 <div>
                     <label for="stockCost" id="stockCostLabel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voorraadkosten per jaar per product</label>
-                    <input type="number" id="stockCost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Voorraadkosten (zonder €-teken)">
+                    <input type="number" id="stockCost" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Voorraadkosten (zonder €-teken)">
                 </div> 
                 <div class="sm:col-span-1">
                     <label for="orderCost" id="orderCostLabel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bestelkosten</label>
-                    <input type="number" id="orderCost" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Bestelkosten (zonder €-teken)">
+                    <input type="number" id="orderCost" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Bestelkosten (zonder €-teken)">
                 </div>
                 <div class="sm:col-span-1">
                     <label for="uom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Verpakkingshoeveelheid (UOM)</label>
-                    <input type="number" id="uom" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Verpakkingshoeveelheid">
+                    <input type="number" id="uom" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Verpakkingshoeveelheid">
                 </div> 
                 <div class="sm:col-span-1">
                     <label for="moq" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Minimale bestelhoeveelheid (MOQ)</label>
@@ -254,7 +254,7 @@
         </div>
     </footer>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
-<script src="appV11.js"></script> 
+<script src="appV12.js"></script> 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const toggleCheckbox = document.getElementById('modeToggle');
@@ -297,7 +297,7 @@
                 const newDiv = document.createElement('div');
                 newDiv.className = 'sm:col-span-1';
                 newDiv.innerHTML = `
-                    <label for="salesData${nextMonth}" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht ${nextMonth} ${nextMonthYear}</label>
+                    <label for="salesData${nextMonth}" data-month="${nextMonth}" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht ${nextMonth} ${nextMonthYear}</label>
                     <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">`;
 
                 // Append the new div to the container

@@ -52,10 +52,13 @@ function submitEOQData() {
 
     document.getElementById('results').innerHTML = '';  // Clear previous results if any
 
+    const apiKey = atob('NjNjOGIxYjAtMzk5Yi00OWFjLWEyNTgtNDAzMDI1YTFkZWIw');
+
     fetch('https://panel.stockbalance.nl:3001/calculate-eoq', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'x-api-key': `${apiKey}`//63c8b1b0-399b-49ac-a258-403025a1deb0
         },
         body: JSON.stringify(data)
     })
