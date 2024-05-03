@@ -41,7 +41,8 @@ function submitEOQData() {
         uom: parseInt(document.getElementById('uom').value, 10) // Corrected: removed extra parenthesis
     };
     
-
+    const kap = atob('NjNjOGIxYjAtMzk5Yi00OWFjLWEyNTgtNDAzMDI1YTFkZWIw');
+    
     // Show loading text
     document.getElementById('loading').style.display = 'block';
     let dots = 0;
@@ -52,13 +53,11 @@ function submitEOQData() {
 
     document.getElementById('results').innerHTML = '';  // Clear previous results if any
 
-    const apiKey = atob('NjNjOGIxYjAtMzk5Yi00OWFjLWEyNTgtNDAzMDI1YTFkZWIw');
-
     fetch('https://panel.stockbalance.nl:3001/calculate-eoq', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'x-api-key': `${apiKey}`//63c8b1b0-399b-49ac-a258-403025a1deb0
+            'x-api-key': `${kap}`
         },
         body: JSON.stringify(data)
     })
