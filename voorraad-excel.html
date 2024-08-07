@@ -14,7 +14,7 @@
 
 
     <!-- Social media share -->
-    <meta property="og:title" content=StockBalance - bereken je optimale voorraad en inkoop>
+    <meta property="og:title" content=StockBalance - bereken je optimale voorraad>
     <meta property="og:site_name" content=StockBalance>
     <meta property="og:url" content=https://www.stockbalance.nl>
     <meta property="og:description" content=Gratis berekenening van de optimale voorraad en bestelhoeveelheid.>
@@ -69,7 +69,7 @@
                             <a href="https://www.stockbalance.nl/#FAQ" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">FAQ</a>
                         </li>
                         <li>
-                            <a href="https://www.stockbalance.nl/voorraad-berekenen" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Gratis inkoop tool</a>
+                            <a href="https://www.stockbalance.nl/#koppelingen" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Gratis voorraad tool</a>
                         </li>
                         <li>
                             <a href="mailto:koen@donskussen.nl" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
@@ -83,123 +83,85 @@
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Optimale voorraad & inkoop berekenen</h1>
-                <p>Bepaal de beste hoeveelheid om in te kopen van een product, ook handig voor de boodschappen. Denk aan de perfecte voorraad WC-rollen, eieren of hagelslag.<br><br></p style="margin-botom: 20px;">
-        <form id="eoqForm">
-            <div class="flex items-center mb-4">
-                <input  id="modeToggle" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
-                <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">&nbsp;Activeer boodschappen-modus </label>
-            </div>
-            <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Verkoopgegevens</h2>
-            <p class="mb-2 text-gray-500 dark:text-gray-400">Hoe meer maanden je invoert, hoe beter de berekening!</p>
+                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Voorraadbeheer in Excel</h1>
+                <!-- wp:heading {"level":1} -->
+<!-- /wp:heading -->
 
-            <div id="salesDataContainer" class="grid gap-4 sm:grid-cols-3 sm:gap-6" style="margin-bottom: 20px;">
-                <div>
-                    <label for="salesData" data-month="april" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht april 2024</label>
-                    <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">
-                </div>
-                <div>
-                    <label for="salesData" data-month="maart" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht maart 2024</label>
-                    <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">
-                </div>
-                <div>
-                    <label for="salesData" data-month="februari" class="salesDataLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Aantal verkocht feb. 2024</label>
-                    <input type="number" name="salesData" id="salesData" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Aantal" required="">
-                </div>
-            </div>
-            <button id="addQuarterBtn" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Maand toevoegen</button>
-            <h2 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Leveranciergegevens</h2>
+<!-- wp:paragraph -->
+<p>Makkelijk en goedkoop je voorraad bijhouden. Dat doe je in Excel. Onze voorraadbeheer Excel template (ook te gebruiken in Google Sheets) berekend snel je totale voorraadwaarde. Je hebt de totale voorraad in 1 overzicht.</p>
+<!-- /wp:paragraph -->
+<br>
+<!-- wp:table -->
+<figure class="wp-block-table"><table class="space-x-3 space-y-5 "><tbody><tr><td><strong>Voordelen voorraadbeheer in Excel</strong></td><td><strong>Nadelen voorraadbeheer in Excel</strong></td></tr><tr><td>Eenvoudig; Je hele voorraad inzichtelijk in 1 klik.&nbsp;</td><td>Foutgevoelig; Kan verkeerde overzichten opleveren.</td></tr><tr><td>Snel overzicht; Alle producten en locaties in 1 tabel.</td><td>Tijd; Alles moet handmatig bijgewerkt worden.&nbsp;</td></tr><tr><td>Gratis/goedkoop; Alleen Excel of Google sheets nodig.</td><td></td></tr></tbody></table></figure>
+<!-- /wp:table -->
 
-            <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
-                <!--<div>
-                    <label for="salesData" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Verkopen/gebruik (gescheiden door ,)</label>
-                    <textarea id="salesData" placeholder="200, 210, 250, 230, 200, 200, 150, 200, 190, 215, 200" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"></textarea>
-                </div>-->
-              
-                <div class="sm:col-span-1">
-                    <label for="leadTime" id="leadTimeLabel" class="leadTimeLabel block mb-2 text-sm font-medium text-gray-900 dark:text-white">Levertijd leverancier</label>
-                    <select id="leadTime" id="leadTime" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                        <option value="1">1 dag</option>
-                        <option value="2">2 dagen</option>
-                        <option value="3">3 dagen</option>
-                        <option value="4">4 dagen</option>
-                        <option value="5">5 dagen</option>
-                        <option value="6">6 dagen</option>
-                        <option value="7">1 week</option>
-                        <option value="14">2 weken</option>
-                        <option value="21">3 weken</option>
-                        <option value="28">4 weken</option>
-                        <option value="35">5 weken</option>
-                        <option value="42">6 weken</option>
-                        <option value="2.054">2 maanden</option>
-                        <option value="2.054">3 maanden</option>
-                        <option value="2.054">4 maanden</option>
-                        <option value="2.054">5 maanden</option>
-                        <option value="2.054">6 maanden</option>
-                    </select>               
-                </div> 
-                <div class="sm:col-span-1">
-                    <label for="costPrice" id="costPriceLabel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Inkoopprijs (excl. BTW en transportkosten)</label>
-                    <input type="number" id="costPrice" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Prijs (zonder €-teken)">
-                </div>
-                <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400">
-                    <h3 id="accordion-flush-heading-5">
-                        <button type="button" class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                            <span>Geavanceerde instellingen</span>
-                            <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+<!-- wp:paragraph -->
+<p><br><a href="https://docs.google.com/spreadsheets/d/1n_Pe_VC2UXXK4oFp_k8zrirA5AIQQUBbaByNhB-f5vg/edit?usp=sharing" class="text-white space-x-3 space-y-5 my-3 bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800">Download de StockBalance Excel-template</a><br><br></p>
 
-                        </button>
-                    </h3>
-                    <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-                        <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-                            <p class="mb-2 text-gray-500 dark:text-gray-400">Schrik niet van woorden als 'UOM' en 'MOQ'!</p>
-                        
-                            <div class="block mb-4">
-                                <label for="stockCost" id="stockCostLabel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Voorraadkosten per jaar per product</label>
-                                <input type="number" id="stockCost" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Voorraadkosten (zonder €-teken)">
-                            </div> 
-                            <div class="block mb-4">
-                                <label for="orderCost" id="orderCostLabel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bestelkosten</label>
-                                <input type="number" id="orderCost" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Bestelkosten (zonder €-teken)">
-                            </div>
-                            <div class="block mb-4">
-                                <label for="uom" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Verpakkingshoeveelheid (UOM)</label>
-                                <input type="number" id="uom" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Verpakkingshoeveelheid">
-                            </div> 
-                            <div class="block mb-4">
-                                <label for="moq" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Minimale bestelhoeveelheid (MOQ)</label>
-                                <input type="number" id="moq" value="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Minimale bestelhoeveelheid">
-                            </div>
-                            <!--<div class="sm:col-span-1">
-                                <label for="serviceLevel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Servicelevel</label>
-                                <input type="number" id="serviceLevel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="1.282">
-                            </div>  -->
-            
-                            <div>
-                            <label for="serviceLevel" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gewenste leverbetrouwbaarheid</label>
-                            <select id="serviceLevel" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option value="1.282">90%</option>
-                                <option value="1.645">95%</option>
-                                <option selected="" value="2.054">98%</option>
-                            </select>               
-                            </div> 
-                        </div>
-                    </div>    
-                </div>
-                <button type="button" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-white bg-purple-700 rounded-lg sm:w-auto focus:outline-none hover:bg-purple-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-purple-700" onclick="validateAndSubmit()">Bereken optimale inkoophoeveelheid</button>
-            </div>
-        </form>
-        <div id="loading" style="display: none;">
-            Berekenen<span id="loadingDots"></span>
-        </div>
-        <div id="results"></div>
-        
-         
-            
-                       
-        </div>
-    </section>
-    <!-- End block -->
+<!-- /wp:paragraph -->
+<h3 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Video voorraad bijhouden in Excel</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-v5wflu_u60?si=cg15DjQhc0gFIPvf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- wp:heading {"level":3} -->
+<h3 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Voordelen die je misloopt bij het gebruik van Excel</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Excel is een geweldige tool voor kleinere bedrijven om hun voorraad bij te houden. Ben jij aan het groeien met je organisatie? Dan loop je aan een aantal voordelen mis die je concurrenten of andere bedrijven wel hebben door het gebruik van software, namelijk:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ul role="list" class="pt-8 space-y-5 my-3 dark:border-gray-700">
+    <li class="flex space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Betere balans tussen liquiditeit en voorraad door efficiënte inkoopmethodes zoals EOQ.</span>
+    </li>
+    <li class="flex space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Hogere omzet, door minder out-of-stock / nee-verkopen.</span>
+    </li>
+    <li class="flex space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Het identificeren van producten met een lage omloopsnelheid, ofwel ‘dode voorraad’.</span>
+    </li>
+    <li class="flex space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Orders picken in batches, waardoor je tijd en dus geld bespaard.</span>
+    </li>
+    <li class="flex space-x-3">
+        <!-- Icon -->
+        <svg class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+        <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Minder fouten door het werken met barcodes.</span>
+    </li>
+
+
+<!-- wp:heading {"level":3} -->
+<h3 class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Top 3 programma’s voor het bijhouden van je voorraad</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Wil jij professionaliseren en af van Excel-sheets? Met inkoop- en voorraadsoftware is je voorraad altijd en overal inzichtelijk. Software kan je helpen bij het maken van moeilijke inkoopbeslissingen, maar ook bij het efficiënt picken van orders. Deze 3 softwarepakketten helpen je bij het organiseren van je voorraad.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+
+<h4 class="mb-4 text-3l font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Stockbalance</h4>Voor een optimale balans tussen voorraad en liquiditeit. Het programma maakt op basis van jouw verkoopdata een geavanceerd inkoopvoorstel. Je voorkomt nee-verkopen en verhoogt daarmee je omzet. Ook houd je geld over voor groei, door nooit te veel voorraad aan te houden.&nbsp;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<h4 class="mb-4 text-3l font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Picqer</h4>Met Picqer creëer je rust in je magazijn chaos. Picqer verzamelt informatie van al je webwinkels op 1 plek. Zo weet je precies waar welke producten staan. Ook maak je met Picqer eenvoudig picklijsten en slimme looproutes aan. Zelfs verzenden en retourneren doe je met 1 klik op de knop.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<h4 class="mb-4 text-3l font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">Goedgepicket</h4>Net als Picqer is Goedgepicket een magazijnoplossing. Het programma maakt inzichtelijk waar je goederen zijn opgeslagen en helpt je bij het snel verwerken van orders. </li>
+<!-- /wp:list-item -->
+<!-- /wp:list -->
+        </section>
 
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900" id="FAQ">
@@ -263,8 +225,7 @@
                 <h2 class="">Probeer StockBalance vandaag nog</h2>
                 <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">Probeer StockBalance 30 dagen gratis. Stopt automatisch.</p>
                     <a href="https://647ztma44tf.typeform.com/to/GamzZdPg" class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-purple-900">Probeer nu 30 dagen gratis</a>
-                    <br><br><br> <a href="/voorraad-berekenen.html">Gratis inkooptool</a> | <a href="/voorraad-excel.html">Voorraadbeheer in Excel</a> 
-
+                    <a href="/voorraad-berekenen">Gratis inkooptool</a> | <a href="/voorraad-excel">Voorraadbeheer in Excel</a> 
             </div>
         </div>
     </section>
